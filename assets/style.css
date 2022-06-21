@@ -1,0 +1,28 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+h4{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    color:green;
+}
