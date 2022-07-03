@@ -29,15 +29,18 @@ class Cerveza {
    
     { id: 4, cerveza: "Porter" },
    
-   ];
-   
-   cervezas.push(new Cerveza("Kolsch", "200"));
-   
+   ]
    console.log(cervezas)
    
-  const resultado = cervezas.filter ( (el) => el.cerveza.includes('JS'))
+  const resultado = cervezas.find ( (el) => el.cerveza === "Kolsch")
+  const resultado2 = cervezas.find ( (el) => el.cerveza === "Honey")
+  const resultado3 = cervezas.find ( (el) => el.cerveza === "Ipa")
+  const resultado4 = cervezas.find ( (el) => el.cerveza === "Porter")
+  
   console.log(resultado);
-
+  console.log(resultado2);
+  console.log(resultado3);
+  console.log(resultado4);
 
 
 
