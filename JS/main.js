@@ -1,4 +1,59 @@
+
+class Cerveza {
+
+    constructor(estilo, precio) {
+   
+     this.estilo = estilo.toUpperCase();
+   
+     this.precio = parseFloat(precio);
+   
+     this.vendido = false;
+   
+    }
+   
+    impuestos() {
+   
+     this.precio = this.precio * 1.21;
+   
+    }
+   
+   }
+   
+   const cervezas = [
+   
+    { id: 1, cerveza: "Kolsch" },
+   
+    { id: 2, cerveza: "Honey" },
+   
+    { id: 3, cerveza: "Ipa" },
+   
+    { id: 4, cerveza: "Porter" },
+   
+   ];
+   
+   cervezas.push(new Cerveza("Kolsch", "200"));
+   
+   console.log(cervezas)
+   
+  const resultado = cervezas.filter ( (el) => el.cerveza.includes('JS'))
+  console.log(resultado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Ingreso de peso de etiquetas
+
 while(true){
     var pesoEtiqueta = parseFloat(prompt("Ingrese peso del rollo de etiquetas:"));
 
