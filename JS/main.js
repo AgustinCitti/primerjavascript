@@ -1,5 +1,5 @@
 
-class Cerveza {
+/*class Cerveza {
 
     constructor(estilo, precio) {
    
@@ -40,14 +40,42 @@ class Cerveza {
   console.log(resultado);
   console.log(resultado2);
   console.log(resultado3);
-  console.log(resultado4);
+  console.log(resultado4);*/
 
 
+  const cervezas= [{ id: 1, estilo: "Kolsch", precio:200},
+                    {id: 2, estilo: "Honey", precio:200 },
+                    {id: 3, estilo: "Porter", precio:170 },
+                    {id: 4, estilo: "Ipa", precio:170 },
+                    {id: 5, estilo: "Scottish", precio:170 }]
 
+const buscado = cervezas.find(estilo => estilo.id === 1)
+const buscado2 = cervezas.find(estilo => estilo.id === 2)
+const buscado3 = cervezas.find(estilo => estilo.id === 3)
+const buscado4 = cervezas.find(estilo => estilo.id === 4)
+const buscado5 = cervezas.find(estilo => estilo.id === 5)
 
+console.log(buscado);
+console.log(buscado2);
+console.log(buscado3);
+console.log(buscado4);
+console.log(buscado5);
 
+const existe = cervezas.some(cervezas => cervezas.estilo === "Kolsch")
+const existe2 = cervezas.some(cervezas => cervezas.estilo === "Honey")
+const existe3 = cervezas.some(cervezas => cervezas.estilo === "Porter")
+const existe4 = cervezas.some(cervezas => cervezas.estilo === "Ipa")
+const existe5= cervezas.some(cervezas => cervezas.estilo === "Scottish")
+console.log(existe);
+console.log(existe2);
+console.log(existe3);
+console.log(existe4);
+console.log(existe5);
 
-
+const barata = cervezas.filter(estilo => estilo.precio < 180)
+console.log(barata);
+const cara = cervezas.filter(estilo => estilo.precio > 180)
+console.log(cara);
 
 
 
