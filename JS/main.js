@@ -1,47 +1,11 @@
+//Ingreso Usuario
+let nombreIngresado=prompt("Ingresar nombre")
+let titulo = document.getElementById("Titulo")
+titulo.innerHTML ="<h1>Bienvenido "+nombreIngresado+" </h1>"
 
-/*class Cerveza {
 
-    constructor(estilo, precio) {
-   
-     this.estilo = estilo.toUpperCase();
-   
-     this.precio = parseFloat(precio);
-   
-     this.vendido = false;
-   
-    }
-   
-    impuestos() {
-   
-     this.precio = this.precio * 1.21;
-   
-    }
-   
-   }
-   
-   const cervezas = [
-   
-    { id: 1, cerveza: "Kolsch" },
-   
-    { id: 2, cerveza: "Honey" },
-   
-    { id: 3, cerveza: "Ipa" },
-   
-    { id: 4, cerveza: "Porter" },
-   
-   ]
-   console.log(cervezas)
-   
-  const resultado = cervezas.find ( (el) => el.cerveza === "Kolsch")
-  const resultado2 = cervezas.find ( (el) => el.cerveza === "Honey")
-  const resultado3 = cervezas.find ( (el) => el.cerveza === "Ipa")
-  const resultado4 = cervezas.find ( (el) => el.cerveza === "Porter")
-  
-  console.log(resultado);
-  console.log(resultado2);
-  console.log(resultado3);
-  console.log(resultado4);*/
 
+// cervezas, estilos y precios
 
   const cervezas= [{ id: 1, estilo: "Kolsch", precio:200},
                     {id: 2, estilo: "Honey", precio:200 },
@@ -76,7 +40,6 @@ const barata = cervezas.filter(estilo => estilo.precio < 180)
 console.log(barata);
 const cara = cervezas.filter(estilo => estilo.precio > 180)
 console.log(cara);
-
 
 
 
@@ -158,3 +121,16 @@ document.write("<h4> La cantidad de latas sueltas es: "+cantSueltasM+"</h4>");
 alert("La cantidad de latas en total es: "+ parseInt(cantSueltas +parseInt(latasM)));
 console.log("La cantidad de latas en total es: "+parseInt(cantSueltas +parseInt(latasM)));
 document.write("<h4> La cantidad de latas en total es: "+parseInt(cantSueltas +parseInt(latasM))+"</h4>");
+
+
+// Modificacion del DOM
+
+
+for (const cerveza of cervezas) {
+    let contenedor = document.createElement("div");
+
+    contenedor.innerHTML= `<h3> ID: ${cerveza.id}</h3>
+                            <p> Estilo: ${cerveza.estilo}</p>
+                            <b> $ ${cerveza.precio}</b>`;
+                            document.body.appendChild(contenedor);
+ }
