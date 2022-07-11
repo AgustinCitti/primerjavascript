@@ -37,3 +37,18 @@ b{
     padding-top: 10px;
     color:blueviolet;
 }
+.formEt{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    padding-top:30px;
+  flex-direction: column;
+}
+.formLa{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    padding:30px;
+  flex-direction: column;
+   
+}

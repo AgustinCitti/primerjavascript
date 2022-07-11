@@ -1,7 +1,8 @@
 //Ingreso Usuario
-let nombreIngresado=prompt("Ingresar nombre")
+let nombreIngresado=prompt("Ingresar usuario")
 let titulo = document.getElementById("Titulo")
 titulo.innerHTML ="<h1>Bienvenido "+nombreIngresado+" </h1>"
+console.log("Ingreso usuario: "+nombreIngresado);
 
 
 
@@ -47,8 +48,30 @@ console.log(cara);
 
 
 // Ingreso de peso de etiquetas
+let miFormulario = document.getElementById("form1");
+let boton_Etiquetas = document.getElementById("btnEnviarEtiquetas");
+boton_Etiquetas.addEventListener("click", validarFormulario1);
 
-while(true){
+
+function validarFormulario1() {
+    let pesoEtiqueta = document.getElementById("IngresarEtiquetas").value;
+    if (pesoEtiqueta == ""){
+        alert("completar");
+        return false;
+    }
+    let mensaje =`Etiquetas: ${pesoEtiqueta}`;
+function CalcularCant (mensaje){
+        return ((pesoEtiqueta - 76)/5)
+    }
+    var cant = CalcularCant(pesoEtiqueta);
+    cantM= cant.toFixed(2);
+    console.log(cantM);
+    alert(cantM);
+    miFormulario.submit();
+    document.write("<h4> La cantidad de etiquetas en stock es: "+cantM+"</h4>");
+}
+//-------------------------------
+/*while(true){
     var pesoEtiqueta = parseFloat(prompt("Ingrese peso del rollo de etiquetas:"));
 
     if(!isNaN(pesoEtiqueta) && pesoEtiqueta != null && pesoEtiqueta != ""){
@@ -71,13 +94,57 @@ var cant = CalcularCant(pesoEtiqueta);
 cantM= cant.toFixed(2);
 alert("La cantidad de etiquetas en stock es: "+cantM);
 console.log("La cantidad de etiquetas en stock es: "+cantM);
-document.write("<h4> La cantidad de etiquetas en stock es: "+cantM+"</h4>");
+document.write("<h4> La cantidad de etiquetas en stock es: "+cantM+"</h4>");*/
 
+
+
+
+/*
+let miFormulario = document.getElementById(form1);
+miFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e) {
+    e.preventDefault();
+    let formulario =document.getElementById(form1)
+    console.log(formulario);
+    console.log("Valor 1: "+ formulario.children[0].value);
+
+}*/
 
 
 
 //ingreso cantidad de cajas
-while(true){
+let miFormulario1 = document.getElementById("form2");
+let boton_Latas = document.getElementById("btnEnviarLatas");
+boton_Latas.addEventListener("click", validarFormulario2);
+
+
+function validarFormulario2() {
+    let cantCajas = document.getElementById("IngresarCajas").value;
+    if (cantCajas == ""){
+        alert("completar");
+        return false;
+    }
+    let mensaje =`Etiquetas: ${cantCajas}`;
+function CalcularCant (mensaje){
+        return (cantCajas *24)
+    }
+    
+    var cajas = CalcularCant(cantCajas);
+    cajasM= cajas.toFixed(2);
+
+    let sueltas = parseInt(document.getElementById("IngresarLatas").value) + cajas;
+    console.log(cajasM);
+    console.log(sueltas);
+    
+    miFormulario1.submit();
+    document.write('<h3> CONTEO DE LATAS (SUELTAS Y EN CAJA) </h3>');
+    document.write("<h4> La cantidad de latas en cajas es: "+cajasM+"</h4>");
+    document.write("<h4> La cantidad de latas en total es: "+sueltas +"</h4>");
+}
+
+
+/*while(true){
     var cantCajas = parseFloat(prompt("Ingrese cantidad de cajas:"));
 
     if(!isNaN(cantCajas) && cantCajas != null && cantCajas != ""){
@@ -120,7 +187,7 @@ document.write("<h4> La cantidad de latas sueltas es: "+cantSueltasM+"</h4>");
 //latas en total
 alert("La cantidad de latas en total es: "+ parseInt(cantSueltas +parseInt(latasM)));
 console.log("La cantidad de latas en total es: "+parseInt(cantSueltas +parseInt(latasM)));
-document.write("<h4> La cantidad de latas en total es: "+parseInt(cantSueltas +parseInt(latasM))+"</h4>");
+document.write("<h4> La cantidad de latas en total es: "+parseInt(cantSueltas +parseInt(latasM))+"</h4>");*/
 
 
 // Modificacion del DOM
